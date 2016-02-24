@@ -1,2 +1,2 @@
 # 201602
-Pelatihan python
+Pelatihan python sambil makan kacang rebus
