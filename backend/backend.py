@@ -17,4 +17,4 @@ def login_json(user,password):
         return jsonify(hasil)
 
 if __name__ == '__main__':
-    application.run(port=8080)
+    application.run(debu=True, port=8080)
