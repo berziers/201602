@@ -1,8 +1,12 @@
 from flask import Flask, jsonify, render_template
 import psycopg2 as dbapi2
+import os
 
 application = Flask(__name__)
-db = dbapi2.connect (database="dafambackend", user="postgres", password="bpr123***")
+#db = dbapi2.connect (database="dafambackend", user="postgres", password="bpr123***")
+# db = dbapi2.connect ('postgresql://postgres:bpr123***@localhost:5432/dafambackend')
+connection_url = os.environ.get('OPENSHIFT_POSTGRESQL_DB_URL', 'postgresql://postgres:bpr123***@localhost:5432/dafambackend')
+db = dbapi2.connect (connection_url)
 cur = db.cursor()
 
 @application.route("/")
