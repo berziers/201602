@@ -47,8 +47,6 @@ class LoginWindow:
             if response == gtk.RESPONSE_CLOSE:
                 md.destroy()
 
-
-
 if __name__ == "__main__":
     try:
         a = LoginWindow()
